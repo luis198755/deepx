@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply antialiased scroll-smooth;
+  }
+
+  body {
+    @apply text-slate-800 dark:text-slate-100 bg-white dark:bg-slate-900;
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 15s ease-in-out infinite;
+  }
+
+  .animate-float-delay {
+    animation: float 18s ease-in-out infinite 2s;
+  }
+
+  .animate-float-slow {
+    animation: float 20s ease-in-out infinite 1s;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  25% {
+    transform: translateY(-20px) translateX(20px);
+  }
+  50% {
+    transform: translateY(10px) translateX(-15px);
+  }
+  75% {
+    transform: translateY(-15px) translateX(10px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
